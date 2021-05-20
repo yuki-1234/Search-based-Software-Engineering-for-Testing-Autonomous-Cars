@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<criteria xmlns="http://drivebuild.com"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://drivebuild.com drivebuild.xsd">
+    <author>Stefan Huber</author>
+    <version>1</version>
+    <name>Moose Test</name>
+    <environment>mooseTest.dbe.xml</environment>
+    <stepsPerSecond>60</stepsPerSecond>
+    <aiFrequency>6</aiFrequency>
+    <participants>
+        <participant id="ego" model="ETK800">
+            <initialState x="-40" y="4" orientation="0" movementMode="AUTONOMOUS" />
+            <ai>
+                <speed id="egoSpeed" />
+                <camera id="egoCamera" width="320" height = "160" fov="120" direction="FRONT"/>
+            </ai>
+        </participant>
+    </participants>
+    <success>
+        <scPosition participant="ego" x="120" y="4" tolerance="5" />
+    </success>
+    <failure>
+        <or>
+            <scDamage participant="ego" />
+            <scLane participant="ego" onLane="offroad" />
+        </or>
+    </failure>
+</criteria>

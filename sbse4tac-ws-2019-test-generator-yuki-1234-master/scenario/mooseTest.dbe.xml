@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<environment xmlns="http://drivebuild.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://drivebuild.com drivebuild.xsd">
+    <author>Stefan Huber</author>
+    <timeOfDay>0</timeOfDay>
+    <lanes>
+        <lane>
+        </lane>
+    </lanes>
+</environment>
